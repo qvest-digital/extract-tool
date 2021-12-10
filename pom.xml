@@ -39,7 +39,7 @@
 		<commons-io.version>2.7</commons-io.version>
 		<csvfile.version>3.0</csvfile.version>
 		<jackson.version>2.11.1</jackson.version>
-		<log4j.version>2.13.3</log4j.version>
+		<log4j.version>2.15.0</log4j.version>
 		<spring.version>4.3.27.RELEASE</spring.version>
 		<!-- see src/dist/example.sh -->
 		<postgresql.version>42.2.14</postgresql.version>
