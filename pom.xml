@@ -49,6 +49,8 @@
 		<mockito1.version>1.10.19</mockito1.version>
 		<!-- maven plugins -->
 		<maven.owasp.dependency-check.version>6.5.0</maven.owasp.dependency-check.version>
+		<!-- XXX? -->
+		<maven.dependency.version>3.1.2</maven.dependency.version>
 	</properties>
 	<scm>
 		<connection>scm:git:https://evolvis.org/anonscm/git/tartools/extract-tool.git</connection>
