@@ -35,17 +35,17 @@
 		<doclint.optappend>-Xdoclint:all -Xdoclint:-missing</doclint.optappend>
 		<!-- dependencies -->
 		<background-jobs.version>1.26-SNAPSHOT</background-jobs.version>
-		<commons-cli.version>1.4</commons-cli.version>
-		<commons-io.version>2.7</commons-io.version>
+		<commons-cli.version>1.5.0</commons-cli.version>
+		<commons-io.version>2.11.0</commons-io.version>
 		<csvfile.version>3.1-SNAPSHOT</csvfile.version>
-		<jackson.version>2.11.1</jackson.version>
+		<jackson.version>2.13.0</jackson.version>
 		<log4j.version>2.16.0</log4j.version>
-		<spring.version>4.3.27.RELEASE</spring.version>
+		<spring.version>4.3.30.RELEASE</spring.version>
 		<!-- see src/dist/example.sh -->
-		<postgresql.version>42.2.14</postgresql.version>
+		<postgresql.version>42.3.1</postgresql.version>
 		<!-- testing -->
-		<assertj.version>3.16.1</assertj.version>
-		<junit.version>4.13</junit.version>
+		<assertj.version>3.21.0</assertj.version>
+		<junit.version>4.13.2</junit.version>
 		<mockito1.version>1.10.19</mockito1.version>
 		<!-- maven plugins -->
 		<maven.owasp.dependency-check.version>6.5.0</maven.owasp.dependency-check.version>
