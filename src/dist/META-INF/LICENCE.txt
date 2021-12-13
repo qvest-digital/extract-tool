@@ -383,7 +383,7 @@ The dependencies shipped in the -cli (fat executable) JAR are:
 │ Objenesis                                                                │
 │ Copyright 2006-2017 Joe Walnes, Henri Tremblay, Leonardo Mesquita        │
 ├────────────────────────────────────────────┤ "NOTICE" text file contents │
-│ Spring Framework 4.3.27.RELEASE                                          │
+│ Spring Framework 4.3.30.RELEASE                                          │
 │ Copyright (c) 2002-2020 Pivotal, Inc.                                    │
 │                                                                          │
 │ This product is licensed to you under the Apache License, Version 2.0    │
