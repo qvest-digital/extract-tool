@@ -42,7 +42,7 @@
 		<log4j.version>2.16.0</log4j.version>
 		<spring.version>4.3.30.RELEASE</spring.version>
 		<!-- see src/dist/example.sh -->
-		<postgresql.version>42.3.1</postgresql.version>
+		<postgresql.version>42.3.2</postgresql.version>
 		<!-- testing -->
 		<assertj.version>3.21.0</assertj.version>
 		<junit.version>4.13.2</junit.version>
