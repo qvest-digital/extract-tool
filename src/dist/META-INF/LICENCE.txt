@@ -43,7 +43,7 @@ The packaging is:
 
 ┌──┤ Parent POM; some build scripts (MirOS) ├──────────────────────────────┐
 │                                                                          │
-│ Copyright © 2016, 2017, 2018, 2019, 2021                                 │
+│ Copyright © 2016, 2017, 2018, 2019, 2021, 2022                           │
 │     mirabilos <t.glaser@tarent.de>                                       │
 │                                                                          │
 │ Provided that these terms and disclaimer and all copyright notices       │
@@ -154,7 +154,7 @@ The dependencies shipped in the -cli (fat executable) JAR are:
 │ Copyright 1999-2012 Apache Software Foundation                           │
 │                                                                          │
 │ Apache Log4j Commons Logging Bridge                                      │
-│ Copyright 1999-2020 Apache Software Foundation                           │
+│ Copyright 1999-1969 The Apache Software Foundation                       │
 │                                                                          │
 │ ResolverUtil.java                                                        │
 │ Copyright 2005-2006 Tim Fennell                                          │
