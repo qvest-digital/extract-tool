@@ -151,7 +151,10 @@ public class ExtractCliTest {
         final Writer writer = cli.writer();
         writer.write("hallo gezippte welt");
         writer.close();
-        assertThat(FileUtils.readFileToByteArray(outputFile)).isEqualTo(
+        final byte[] cliOutput = FileUtils.readFileToByteArray(outputFile);
+        /* JRE 8/11 set the wrong OS type; JRE 17 does it right */
+        cliOutput[9] = (byte) 0xFF;
+        assertThat(cliOutput).isEqualTo(
           bytes(0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             0xFF, 0xcb, 0x48, 0xcc, 0xc9, 0xc9, 0x57, 0x48, 0x4f,
             0xad, 0xca, 0x2c, 0x28, 0x28, 0x49, 0x55, 0x28, 0x4f,
