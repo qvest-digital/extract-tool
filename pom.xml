@@ -32,7 +32,7 @@
 		<sonar.tests>src/test</sonar.tests>
 		<archiver.copyright.firstyear>2015</archiver.copyright.firstyear>
 		<archiver.copyright.lastyear>2020</archiver.copyright.lastyear>
-		<doclint.optappend>-Xdoclint:all -Xdoclint:-missing</doclint.optappend>
+		<javadoc.doclint>all,-missing</javadoc.doclint>
 		<!-- dependencies -->
 		<background-jobs.version>1.26-SNAPSHOT</background-jobs.version>
 		<commons-cli.version>1.5.0</commons-cli.version>
