@@ -3,7 +3,7 @@ package de.tarent.extract;
 /*-
  * Extract-Tool is Copyright
  *  © 2015, 2016, 2018 Lukas Degener (l.degener@tarent.de)
- *  © 2018, 2019, 2020 mirabilos (t.glaser@tarent.de)
+ *  © 2018, 2019, 2020, 2022 mirabilos (t.glaser@tarent.de)
  *  © 2015 Jens Oberender (j.oberender@tarent.de)
  * Licensor is tarent solutions GmbH, http://www.tarent.de/
  *
@@ -27,13 +27,14 @@ package de.tarent.extract;
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.cfg.MapperBuilder;
+import com.fasterxml.jackson.databind.json.JsonMapper;
 import de.tarent.extract.utils.ExtractorException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -79,21 +80,20 @@ public class Extractor {
     }
 
     private ObjectMapper mapper() {
-        ObjectMapper mapper;
+        MapperBuilder<?, ?> builder;
         try {
-            final Class<? extends JsonFactory> yaml = Class
-              .forName("com.fasterxml.jackson.dataformat.yaml.YAMLFactory")
-              .asSubclass(JsonFactory.class);
-            mapper = new ObjectMapper(yaml.getDeclaredConstructor().newInstance());
-        } catch (final ClassNotFoundException | IllegalAccessException | InstantiationException | InvocationTargetException | NoSuchMethodException e) {
+            builder = (MapperBuilder<?, ?>) Class
+              .forName("com.fasterxml.jackson.dataformat.yaml.YAMLMapper")
+              .getMethod("builder").invoke(null);
+        } catch (final ClassNotFoundException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             LOGGER.debug("YAML support not available, using JSON only", e);
-            mapper = new ObjectMapper();
+            builder = JsonMapper.builder();
         }
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        mapper.configure(MapperFeature.AUTO_DETECT_CREATORS, true);
-        mapper.configure(MapperFeature.CAN_OVERRIDE_ACCESS_MODIFIERS, true);
-        mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, true);
-        return mapper;
+        builder.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        builder.configure(MapperFeature.AUTO_DETECT_CREATORS, true);
+        builder.configure(MapperFeature.CAN_OVERRIDE_ACCESS_MODIFIERS, true);
+        builder.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, true);
+        return builder.build();
     }
 
     private ExtractorQuery loadQuery(final ExtractIo io) {

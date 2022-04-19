@@ -31,7 +31,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,8 +40,7 @@ import java.io.InputStreamReader;
 import java.util.Map;
 import java.util.Objects;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class QueryParsingTest {
     @Before
@@ -78,11 +77,11 @@ public class QueryParsingTest {
     }
 
     private ObjectMapper mapper() {
-        final ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        mapper.configure(MapperFeature.AUTO_DETECT_CREATORS, true);
-        mapper.configure(MapperFeature.CAN_OVERRIDE_ACCESS_MODIFIERS, true);
-        mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, true);
-        return mapper;
+        return YAMLMapper.builder()
+          .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+          .configure(MapperFeature.AUTO_DETECT_CREATORS, true)
+          .configure(MapperFeature.CAN_OVERRIDE_ACCESS_MODIFIERS, true)
+          .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, true)
+          .build();
     }
 }
