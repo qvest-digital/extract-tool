@@ -148,13 +148,13 @@ The dependencies shipped in the -cli (fat executable) JAR are:
 │ The Apache Software Foundation (http://www.apache.org/).                 │
 │                                                                          │
 │ Apache Log4j API                                                         │
-│ Copyright 1999-1969 The Apache Software Foundation                       │
+│ Copyright 1999-2022 The Apache Software Foundation                       │
 │                                                                          │
 │ Apache Log4j Core                                                        │
 │ Copyright 1999-2012 Apache Software Foundation                           │
 │                                                                          │
 │ Apache Log4j Commons Logging Bridge                                      │
-│ Copyright 1999-1969 The Apache Software Foundation                       │
+│ Copyright 1999-2022 The Apache Software Foundation                       │
 │                                                                          │
 │ ResolverUtil.java                                                        │
 │ Copyright 2005-2006 Tim Fennell                                          │
