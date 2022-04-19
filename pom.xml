@@ -47,7 +47,7 @@
 		<!-- testing -->
 		<assertj.version>3.22.0</assertj.version>
 		<junit.version>4.13.2</junit.version>
-		<mockito1.version>1.10.19</mockito1.version>
+		<mockito.version>4.4.0</mockito.version>
 		<!-- maven plugins -->
 		<maven.owasp.dependency-check.version>7.0.4</maven.owasp.dependency-check.version>
 	</properties>
@@ -284,8 +284,8 @@
 				</dependency>
 				<dependency>
 					<groupId>org.mockito</groupId>
-					<artifactId>mockito-all</artifactId>
-					<version>${mockito1.version}</version>
+					<artifactId>mockito-core</artifactId>
+					<version>${mockito.version}</version>
 					<scope>test</scope>
 				</dependency>
 				<!-- for src/dist/example.sh -->

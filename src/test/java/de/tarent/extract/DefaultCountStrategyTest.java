@@ -32,13 +32,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.eq;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DefaultCountStrategyTest {
@@ -55,7 +53,7 @@ public class DefaultCountStrategyTest {
 
     @Test
     public void countQueryDoesNotIncludeOrderByClause() {
-        when(query.getOrderBy()).thenReturn("foo ASC");
+        lenient().when(query.getOrderBy()).thenReturn("foo ASC");
         when(query.getSql()).thenReturn("SELECT quatsch FROM unsinn");
         ArgumentCaptor<String> sqlCaptor = ArgumentCaptor.forClass(String.class);
         strategy.count(query);

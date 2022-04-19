@@ -31,12 +31,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import java.sql.ResultSet;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.verifyZeroInteractions;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class RowProcessorTest {
@@ -52,7 +52,7 @@ public class RowProcessorTest {
     @Test
     public void itPrintsEmptyRowsIfNoValueExtractorsAreGiven() {
         new RowProcessor().processRow(rs, printer);
-        verifyZeroInteractions(rs);
+        verifyNoInteractions(rs);
         assertThat(printer.toString()).isEqualTo("\n");
     }
 
@@ -61,7 +61,7 @@ public class RowProcessorTest {
         final ResultSetValueExtractor a = extractor("a");
         final ResultSetValueExtractor b = extractor("b");
         new RowProcessor(a, b).processRow(rs, printer);
-        verifyZeroInteractions(rs);
+        verifyNoInteractions(rs);
         assertThat(printer.toString()).isEqualTo("0:a,1:b\n");
     }
 
@@ -70,7 +70,7 @@ public class RowProcessorTest {
         final ResultSetValueExtractor a = extractor("a");
         final ResultSetValueExtractor b = extractor("b");
         new RowProcessor(a, null, null, b).processRow(rs, printer);
-        verifyZeroInteractions(rs);
+        verifyNoInteractions(rs);
         assertThat(printer.toString()).isEqualTo("0:a,3:b\n");
     }
 

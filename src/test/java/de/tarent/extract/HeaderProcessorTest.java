@@ -3,7 +3,7 @@ package de.tarent.extract;
 /*-
  * Extract-Tool is Copyright
  *  © 2015, 2016, 2018 Lukas Degener (l.degener@tarent.de)
- *  © 2018, 2019, 2020 mirabilos (t.glaser@tarent.de)
+ *  © 2018, 2019, 2020, 2022 mirabilos (t.glaser@tarent.de)
  *  © 2015 Jens Oberender (j.oberender@tarent.de)
  * Licensor is tarent solutions GmbH, http://www.tarent.de/
  *
@@ -31,7 +31,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
 
 import java.sql.ResultSet;
@@ -42,8 +42,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Matchers.anyInt;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class HeaderProcessorTest {
@@ -57,24 +56,22 @@ public class HeaderProcessorTest {
     private ResultSetMetaData metadata;
 
     public void columnLabels(final String... labels) throws SQLException {
-
         when(metadata.getColumnCount()).thenReturn(labels.length);
         when(metadata.getColumnLabel(anyInt())).thenAnswer((Answer<String>) invocation -> {
-            final int col = invocation.getArgumentAt(0, Integer.class) - 1;
+            final Integer value = invocation.getArgument(0);
+            final int col = value - 1;
             return labels[col];
         });
     }
 
     @Before
-    public void setup() throws SQLException {
-
+    public void setup() {
         printer = new TestRowPrinter();
-        when(rs.getMetaData()).thenReturn(metadata);
+        //when(rs.getMetaData()).thenReturn(metadata); // disabled due to unnecessary stubbing
     }
 
     @Test
     public void itPrintsEmptyRowsIfNoMappingsAreGiven() {
-
         final ResultSetValueExtractor[] extractors = new HeaderProcessor(mappings).processHeader(metadata, printer);
 
         assertThat(printer.toString()).isEqualTo("\n");
@@ -82,16 +79,16 @@ public class HeaderProcessorTest {
         assertThat(extractors).isEmpty();
     }
 
+    @SuppressWarnings("NewClassNamingConvention")
     public static class FooExtractor implements ResultSetValueExtractor {
-
         @Override
         public Object extractValue(final ResultSet rs, final int col) {
             return null;
         }
     }
 
+    @SuppressWarnings("NewClassNamingConvention")
     public static class ConfigurableExtractor implements ResultSetValueExtractor {
-
         private final Properties properties;
 
         public ConfigurableExtractor(Properties properties) {
@@ -104,8 +101,8 @@ public class HeaderProcessorTest {
         }
     }
 
+    @SuppressWarnings("NewClassNamingConvention")
     public static class NestedConfigurableExtractor implements ResultSetValueExtractor {
-
         private final Map<String, ?> properties;
 
         public NestedConfigurableExtractor(Map<String, ?> properties) {
