@@ -1,10 +1,12 @@
 # shaded into Spring core
-org.springframework:spring-core:4.3.30.RELEASE \
-	org.objenesis:objenesis:2.6
+org.springframework:spring-core:5.3.19 \
+	org.objenesis:objenesis:3.2
 # embedded patched version in Spring core
-!org.springframework:spring-core:4.3.30.RELEASE \
-	org.ow2.asm:asm:6.0
+# currently actually git master of shortly before ASM 9.3
+# but I checked the delta and it shall suffice
+!org.springframework:spring-core:5.3.19 \
+	org.ow2.asm:asm:9.3
 # shaded into Spring core; dependencies are optional (ant)
 # or transformed to embedded patched version (asm, see above)
-+org.springframework:spring-core:4.3.30.RELEASE \
-	cglib:cglib:3.2.6
++org.springframework:spring-core:5.3.19 \
+	cglib:cglib:3.3.0
