@@ -64,7 +64,7 @@ The packaging is:
 
 The dependencies shipped in the -cli (fat executable) JAR are:
 
-┌──┤ Jackson (Apache 2) ├──────────────────────────────────────────────────┐
+┌──┤ Jackson Core (Apache 2) ├─────────────────────────────────────────────┐
 │                                                                          │
 │ Jackson core, annotations and databind module are published under the    │
 │ Apache 2 licence. The NOTICE file contains:                              │
@@ -87,9 +87,9 @@ The dependencies shipped in the -cli (fat executable) JAR are:
 │ A list of contributors may be found from CREDITS(-2.x) file, which is    │
 │ included in some artifacts (usually source distributions); but is always │
 │ available from the source code management (SCM) system project uses.     │
-│                                                                          │
-├──────────────────────────────────────────────────────────────────────────┤
-│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+┌──┤ Jackson YAML (Apache 2) ├─────────────────────────────────────────────┐
 │ This copy of Jackson JSON processor YAML module is licensed under the    │
 │ Apache (Software) License, version 2.0 ("the License").                  │
 │ See the License for details about distribution rights, and the           │

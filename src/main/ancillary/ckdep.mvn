@@ -1,8 +1,8 @@
 cglib cglib 3.2.6
-com.fasterxml.jackson.core jackson-annotations 2.13.1
-com.fasterxml.jackson.core jackson-core 2.13.1
-com.fasterxml.jackson.core jackson-databind 2.13.1
-com.fasterxml.jackson.dataformat jackson-dataformat-yaml 2.13.1
+com.fasterxml.jackson.core jackson-annotations 2.13.2
+com.fasterxml.jackson.core jackson-core 2.13.2
+com.fasterxml.jackson.core jackson-databind 2.13.2.2
+com.fasterxml.jackson.dataformat jackson-dataformat-yaml 2.13.2
 commons-cli commons-cli 1.5.0
 commons-logging commons-logging 1.2
 org.apache.logging.log4j log4j-api 2.17.2
@@ -18,4 +18,4 @@ org.springframework spring-core 4.3.30.RELEASE
 org.springframework spring-expression 4.3.30.RELEASE
 org.springframework spring-jdbc 4.3.30.RELEASE
 org.springframework spring-tx 4.3.30.RELEASE
-org.yaml snakeyaml 1.28
+org.yaml snakeyaml 1.30
