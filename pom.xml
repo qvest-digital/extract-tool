@@ -186,6 +186,10 @@
 								<!-- for src/dist/example.sh -->
 								<ignoredUnusedDeclaredDependency>org.postgresql:postgresql</ignoredUnusedDeclaredDependency>
 							</ignoredUnusedDeclaredDependencies>
+							<ignoredNonTestScopedDependencies>
+								<!-- optional but enabled-by-default dependency, used via reflection if present -->
+								<ignoredNonTestScopedDependency>com.fasterxml.jackson.dataformat:jackson-dataformat-yaml</ignoredNonTestScopedDependency>
+							</ignoredNonTestScopedDependencies>
 						</configuration>
 					</execution>
 				</executions>
