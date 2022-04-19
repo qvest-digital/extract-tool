@@ -4,6 +4,9 @@ com.fasterxml.jackson.core:jackson-databind 2.13.2.2 compile ok
 com.fasterxml.jackson.dataformat:jackson-dataformat-yaml 2.13.2 compile ok
 commons-cli:commons-cli 1.5.0 compile ok
 commons-io:commons-io 2.11.0 test ok
+inside::org.springframework:spring-core:5.3.19::cglib:cglib 3.3.0 embedded TODO
+inside::org.springframework:spring-core:5.3.19::org.objenesis:objenesis 3.2 embedded TODO
+inside::org.springframework:spring-core:5.3.19::org.ow2.asm:asm 9.3 embedded TODO
 junit:junit 4.13.2 test ok
 net.bytebuddy:byte-buddy 1.12.8 test ok
 net.bytebuddy:byte-buddy-agent 1.12.8 test ok
