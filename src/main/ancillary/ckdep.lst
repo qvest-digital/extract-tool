@@ -14,8 +14,8 @@ org.apache.logging.log4j:log4j-api 2.17.2 compile ok
 org.apache.logging.log4j:log4j-core 2.17.2 provided ok
 org.assertj:assertj-core 3.22.0 test ok
 org.checkerframework:checker-qual 3.5.0 provided ok
-org.evolvis.tartools:background-jobs 1.27-SNAPSHOT compile ok
-org.evolvis.tartools:csvfile 3.2-SNAPSHOT compile ok
+org.evolvis.tartools:background-jobs 1.27 compile ok
+org.evolvis.tartools:csvfile 3.2 compile ok
 org.hamcrest:hamcrest-core 1.3 test ok
 org.mockito:mockito-core 4.4.0 test ok
 org.objenesis:objenesis 3.2 test ok
