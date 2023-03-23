@@ -41,7 +41,7 @@
 		<jackson.version>2.13.2</jackson.version>
 		<jackson.databind.version>2.13.2.2</jackson.databind.version>
 		<log4j.version>2.17.2</log4j.version>
-		<spring.version>5.3.19</spring.version>
+		<spring.version>5.3.26</spring.version>
 		<!-- see src/dist/example.sh -->
 		<postgresql.version>42.3.4</postgresql.version>
 		<!-- testing -->
