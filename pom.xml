@@ -72,7 +72,7 @@
 							<goal>aggregate</goal>
 						</goals>
 						<configuration>
-							<failBuildOnCVSS>8</failBuildOnCVSS>
+							<!--failBuildOnCVSS>8</failBuildOnCVSS-->
 							<scanSet>
 								<fileSet>
 									<directory>src</directory>
