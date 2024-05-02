@@ -79,9 +79,9 @@
 								</fileSet>
 							</scanSet>
 							<skipArtifactType>pom</skipArtifactType>
-							<!-- suppressionFiles>
+							<suppressionFiles>
 								<suppressionFile>src/main/ancillary/dependency-check-suppressions.xml</suppressionFile>
-							</suppressionFiles -->
+							</suppressionFiles>
 						</configuration>
 					</execution>
 				</executions>
