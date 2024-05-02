@@ -2,10 +2,10 @@ package de.tarent.extract.utils;
 
 /*-
  * Extract-Tool is Copyright
- *  © 2015, 2016, 2018 Lukas Degener (l.degener@tarent.de)
- *  © 2018, 2019, 2020 mirabilos (t.glaser@tarent.de)
+ *  © 2015, 2016, 2018 Lukas Degener (l.degener@qvest-digital.com)
+ *  © 2018, 2019, 2020 mirabilos (t.glaser@qvest-digital.com)
  *  © 2015 Jens Oberender (j.oberender@tarent.de)
- * Licensor is tarent solutions GmbH, http://www.tarent.de/
+ * Licensor: Qvest Digital AG, Bonn, Germany
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the

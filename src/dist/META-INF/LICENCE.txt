@@ -4,10 +4,10 @@ dependencies, as shipped, are reproduced below.
 ┌──┤ Extract-Tool (MIT) ├──────────────────────────────────────────────────┐
 │                                                                          │
 │ Extract-Tool is Copyright                                                │
-│  © 2015, 2016, 2018 Lukas Degener <l.degener@tarent.de>                  │
-│  © 2018, 2019, 2020, 2022 mirabilos <t.glaser@tarent.de>                 │
+│  © 2015, 2016, 2018 Lukas Degener <l.degener@qvest-digital.com>          │
+│  © 2018, 2019, 2020, 2022 mirabilos <t.glaser@qvest-digital.com>         │
 │  © 2015 Jens Oberender <j.oberender@tarent.de>                           │
-│ Licensor is tarent solutions GmbH, http://www.tarent.de/                 │
+│ Licensor: Qvest Digital AG, Bonn, Germany                                │
 │                                                                          │
 │ Permission is hereby granted, free of charge, to any person obtaining    │
 │ a copy of this software and associated documentation files (the          │
@@ -44,7 +44,7 @@ The packaging is:
 ┌──┤ Parent POM; some build scripts (MirOS) ├──────────────────────────────┐
 │                                                                          │
 │ Copyright © 2016, 2017, 2018, 2019, 2021, 2022                           │
-│     mirabilos <t.glaser@tarent.de>                                       │
+│     mirabilos <t.glaser@qvest-digital.com>                               │
 │                                                                          │
 │ Provided that these terms and disclaimer and all copyright notices       │
 │ are retained or reproduced in an accompanying document, permission       │
@@ -159,9 +159,9 @@ The dependencies shipped in the -cli (fat executable) JAR are:
 │                                                                          │
 │ Background-Jobs is Copyright                                             │
 │  © 2012 Атанас Александров <a.alexandrov@tarent.de>                      │
-│  © 2012, 2013, 2014, 2015 Lukas Degener <l.degener@tarent.de>            │
+│  © 2012, 2013, 2014, 2015 Lukas Degener <l.degener@qvest-digital.com>    │
 │  © 2015, 2016 Jens Oberender <j.oberender@tarent.de>                     │
-│ Licensor is tarent solutions GmbH, http://www.tarent.de/                 │
+│ Licensor: Qvest Digital AG, Bonn, Germany                                │
 │                                                                          │
 │ Permission is hereby granted, free of charge, to any person obtaining    │
 │ a copy of this software and associated documentation files (the          │
@@ -194,20 +194,20 @@ The dependencies shipped in the -cli (fat executable) JAR are:
 │                                                                          │
 │ COPYING in this directory has the full LGPL licence terms and text.      │
 │                                                                          │
-│ Licensor is tarent solutions GmbH, http://www.tarent.de/                 │
+│ Licensor: Qvest Digital AG, Bonn, Germany                                │
 │                                                                          │
 │ Copyright holders and contributors:                                      │
 │                                                                          │
 │ *** CSVFile, CSVFileReader, CSVFileWriter, CSVFile10Writer ***           │
 │                                                                          │
-│ Copyright © 2018, 2019 mirabilos <t.glaser@tarent.de>                    │
+│ Copyright © 2018, 2019 mirabilos <t.glaser@qvest-digital.com>            │
 │                                                                          │
 │ Formerly developed as part of VerA.web:                                  │
 │ Copyright © 2016 Атанас Александров <a.alexandrov@tarent.de>             │
 │ Copyright © 2006 Christoph Jerolimov <jerolimov@gmx.de>                  │
 │ Copyright © 2008 Carsten Klein <c.klein@tarent.de>                       │
 │ Copyright © 2005 Michael Klink <m.klink@tarent.de>                       │
-│ Copyright © 2013, 2015, 2018 mirabilos <t.glaser@tarent.de>              │
+│ Copyright © 2013, 2015, 2018 mirabilos <t.glaser@qvest-digital.com>      │
 │ and older code, Copyright © 2004–2008 ⮡ tarent GmbH and contributors.    │
 │                                                                          │
 │ Copyright © 2005 Fabrizio Fazzino (under GNU LGPL) — also on             │
@@ -260,7 +260,7 @@ The dependencies shipped in the -cli (fat executable) JAR are:
 │ *** SSVFileReader, SSVFileWriter, the build scripts and test cases ***   │
 │                                                                          │
 │ Copyright © 2016, 2017, 2018, 2019                                       │
-│ 	mirabilos <t.glaser@tarent.de>                                     │
+│ 	mirabilos <t.glaser@qvest-digital.com>                             │
 │ Copyright © 2015, 2017, 2019, 2020                                       │
 │ 	mirabilos <mirabilos@evolvis.org>                                  │
 │                                                                          │
