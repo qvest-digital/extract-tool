@@ -38,12 +38,27 @@ if isjava11 $j11; then
 	java="$java $j11"
 fi
 
+jar=
+for x in extract-tool-*-cli.jar; do
+	if test -n "$jar"; then
+		echo >&2 "E: multiple CLI JAR versions found"
+		ls -l extract-tool-*-cli.jar | sed 's/^/N: /' >&2
+		exit 1
+	fi
+	if test -s "$x"; then
+		jar=$x
+		continue
+	fi
+	echo >&2 "E: no CLI JAR found"
+	exit 1
+done
+
 exec $java \
     -Djdbc.driver="$db" \
     -Djdbc.url="$dburl" \
     -Djdbc.username="$dbuser" \
     -Djdbc.password="$dbpass" \
-    -jar extract-tool-*-cli.jar \
+    -jar "$jar" \
     -c /dev/null \
     -J "$dbjdbc" \
     "${1:-$(dirname "$0")/example.jsn}"
