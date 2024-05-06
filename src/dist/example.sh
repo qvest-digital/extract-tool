@@ -1,7 +1,17 @@
 #!/bin/sh
 # © mirabilos Ⓕ CC0 or MirBSD or Apache 2 or MIT
 
-java=java
+java=${JAVA:-java}
+
+test -n "$jar" || for x in extract-tool-*-cli.jar; do
+	if test -n "$jar"; then
+		echo >&2 "E: multiple CLI JAR versions found"
+		ls -l extract-tool-*-cli.jar | sed 's/^/N: /' >&2
+		exit 1
+	fi
+	jar=$x
+done
+test -s "$jar" || echo >&2 "E: no CLI JAR found"
 
 if test -z "$db$dburl$dbuser$dbpass"; then
 	if test -z "$PGHOST$PGPORT$PGDATABASE$PGUSER$PGPASSWORD"; then
@@ -37,21 +47,6 @@ j11='--add-opens java.base/java.lang=ALL-UNNAMED'
 if isjava11 $j11; then
 	java="$java $j11"
 fi
-
-jar=
-for x in extract-tool-*-cli.jar; do
-	if test -n "$jar"; then
-		echo >&2 "E: multiple CLI JAR versions found"
-		ls -l extract-tool-*-cli.jar | sed 's/^/N: /' >&2
-		exit 1
-	fi
-	if test -s "$x"; then
-		jar=$x
-		continue
-	fi
-	echo >&2 "E: no CLI JAR found"
-	exit 1
-done
 
 exec $java \
     -Djdbc.driver="$db" \
