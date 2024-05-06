@@ -33,18 +33,20 @@ Summary of individual licences used, including all dependencies:
 • Apache 2
 • BSD (two-clause)
 • BSD (three-clause)
+• GNU LGPLv2 or later
 • MIT
-• MirOS
+• MirBSD (The MirOS Licence)
 Some dependencies are also marked as being in the Public Domain.
 
 ╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
 
 The packaging is:
 
-┌──┤ Parent POM; some build scripts (MirOS) ├──────────────────────────────┐
+┌──┤ Parent POM; some build scripts (MirBSD) ├─────────────────────────────┐
 │                                                                          │
 │ Copyright © 2016, 2017, 2018, 2019, 2021, 2022                           │
 │     mirabilos <t.glaser@qvest-digital.com>                               │
+│ Licensor: Qvest Digital AG, Bonn, Germany                                │
 │                                                                          │
 │ Provided that these terms and disclaimer and all copyright notices       │
 │ are retained or reproduced in an accompanying document, permission       │
@@ -192,7 +194,7 @@ The dependencies shipped in the -cli (fat executable) JAR are:
 │ as published by the Free Software Foundation. Some individual files      │
 │ are available as well under more liberal terms as documented below.      │
 │                                                                          │
-│ COPYING in this directory has the full LGPL licence terms and text.      │
+│ ../csvfile/COPYING has the full LGPL licence terms and text.             │
 │                                                                          │
 │ Licensor: Qvest Digital AG, Bonn, Germany                                │
 │                                                                          │
@@ -279,6 +281,11 @@ The dependencies shipped in the -cli (fat executable) JAR are:
 │ damage or existence of a defect, except proven that it results out       │
 │ of said person’s immediate fault when using the work as intended.        │
 └──────────────────────────────────────────────────────────────────────────┘
+
+For the purpose of the LGPL’s relinking and uncombined form provisions, the
+LGPL library is contained in the org/evolvis/tartools/csvfile/ directory of
+the CLI JAR only and can be swapped with a modified Library. Alternatively,
+just recompile from available sources.
 
 ┌──┤ Spring Framework (Apache 2; 3-clause BSD) ├───────────────────────────┐
 │                                                                          │
