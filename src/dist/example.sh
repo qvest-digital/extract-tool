@@ -1,6 +1,22 @@
 #!/bin/sh
+# © mirabilos Ⓕ CC0 or MirBSD or Apache 2 or MIT
 
 java=java
+
+if test -z "$db$dburl$dbuser$dbpass"; then
+	if test -z "$PGHOST$PGPORT$PGDATABASE$PGUSER$PGPASSWORD"; then
+		echo >&2 "I: using fallback test-database parameters"
+		PGHOST=localhost
+		PGPORT=5432
+		PGDATABASE=hellophpworld
+		PGUSER=hellophpworld
+		PGPASSWORD=P68ntEvJQbhI
+	fi
+	db=org.postgresql.Driver
+	dburl=jdbc:postgresql://$PGHOST:$PGPORT/$PGDATABASE
+	dbuser=$PGUSER
+	dbpass=$PGPASSWORD
+fi
 
 isjava11() {
 	$java "$@" --source 11 /dev/stdin >/dev/null 2>&1 <<'	EOF'
@@ -19,10 +35,10 @@ if isjava11 $j11; then
 fi
 
 exec $java \
-    -Djdbc.driver="${db:-org.postgresql.Driver}" \
-    -Djdbc.url="${dburl:-jdbc:postgresql://localhost:5432/hellophpworld}" \
-    -Djdbc.username="${dbuser:-hellophpworld}" \
-    -Djdbc.password="${dbpass:-P68ntEvJQbhI}" \
+    -Djdbc.driver="$db" \
+    -Djdbc.url="$dburl" \
+    -Djdbc.username="$dbuser" \
+    -Djdbc.password="$dbpass" \
     -jar extract-tool-*-cli.jar \
     -c /dev/null \
     -J ~/.m2/repository/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar \
