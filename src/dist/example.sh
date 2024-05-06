@@ -17,6 +17,10 @@ if test -z "$db$dburl$dbuser$dbpass"; then
 	dbuser=$PGUSER
 	dbpass=$PGPASSWORD
 fi
+test -n "$dbjdbc" || if test x"$db" = x"org.postgresql.Driver"; then
+	dbjdbc=~/.m2/repository/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar
+fi
+test -s "$dbjdbc" || echo >&2 "W: cannot find JDBC driver"
 
 isjava11() {
 	$java "$@" --source 11 /dev/stdin >/dev/null 2>&1 <<'	EOF'
@@ -41,5 +45,5 @@ exec $java \
     -Djdbc.password="$dbpass" \
     -jar extract-tool-*-cli.jar \
     -c /dev/null \
-    -J ~/.m2/repository/org/postgresql/postgresql/42.7.3/postgresql-42.7.3.jar \
+    -J "$dbjdbc" \
     "${1:-$(dirname "$0")/example.jsn}"
