@@ -13,13 +13,18 @@
 			<unpackOptions>
 				<excludes>
 					<exclude>META-INF/DEPENDENCIES</exclude>
+					<exclude>META-INF/FastDoubleParser-LICENSE</exclude>
+					<exclude>META-INF/FastDoubleParser-NOTICE</exclude>
 					<exclude>META-INF/LICENCE</exclude>
-					<exclude>META-INF/LICENSE</exclude>
 					<exclude>META-INF/LICENSE.txt</exclude>
-					<exclude>META-INF/NOTICE</exclude>
+					<exclude>META-INF/LICENSE</exclude>
 					<exclude>META-INF/NOTICE.txt</exclude>
+					<exclude>META-INF/NOTICE</exclude>
+					<exclude>META-INF/legal/org.evolvis.tartools/background-jobs/LICENCE</exclude>
+					<exclude>META-INF/legal/org.evolvis.tartools/csvfile/LICENCE</exclude>
 					<exclude>META-INF/license.txt</exclude>
 					<exclude>META-INF/notice.txt</exclude>
+					<exclude>META-INF/thirdparty-LICENSE</exclude>
 				</excludes>
 			</unpackOptions>
 			<scope>runtime</scope>
