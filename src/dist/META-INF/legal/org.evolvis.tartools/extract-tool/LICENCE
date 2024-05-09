@@ -397,7 +397,7 @@ just recompile from available sources.
 
 ┌──┤ Spring Framework (Apache 2; 3-clause BSD) ├───────────────────────────┐
 │                                                                          │
-│ Copyright 2002-2021 the original author or authors.                      │
+│ Copyright 2002-2024 the original author or authors.                      │
 │                                                                          │
 │ Licensed under the Apache License, Version 2.0 (the "License");          │
 │ you may not use this file except in compliance with the License.         │
@@ -517,8 +517,8 @@ just recompile from available sources.
 │ Objenesis                                                                │
 │ Copyright 2006-2021 Joe Walnes, Henri Tremblay, Leonardo Mesquita        │
 ├────────────────────────────────────────────┤ "NOTICE" text file contents │
-│ Spring Framework 5.3.19                                                  │
-│ Copyright (c) 2002-2022 Pivotal, Inc.                                    │
+│ Spring Framework 5.3.34                                                  │
+│ Copyright (c) 2002-2024 Pivotal, Inc.                                    │
 │                                                                          │
 │ This product is licensed to you under the Apache License, Version 2.0    │
 │ (the "License"). You may not use this product except in compliance with  │
