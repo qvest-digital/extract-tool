@@ -1,4 +1,5 @@
 cglib cglib 3.3.0
+ch.randelshofer fastdoubleparser 1.0.0
 com.fasterxml.jackson.core jackson-annotations 2.17.1
 com.fasterxml.jackson.core jackson-core 2.17.1
 com.fasterxml.jackson.core jackson-databind 2.17.1
