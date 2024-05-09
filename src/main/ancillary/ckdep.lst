@@ -11,8 +11,8 @@ inside::org.springframework:spring-core:5.3.34::org.ow2.asm:asm 9.3 embedded ok
 junit:junit 4.13.2 test ok
 net.bytebuddy:byte-buddy 1.14.11 test ok
 net.bytebuddy:byte-buddy-agent 1.12.8 test ok
-org.apache.logging.log4j:log4j-api 2.23.1 compile TODO
-org.apache.logging.log4j:log4j-core 2.23.1 provided TODO
+org.apache.logging.log4j:log4j-api 2.23.1 compile ok
+org.apache.logging.log4j:log4j-core 2.23.1 provided ok
 org.assertj:assertj-core 3.25.3 test ok
 org.checkerframework:checker-qual 3.42.0 provided TODO
 org.evolvis.tartools:background-jobs 1.28-SNAPSHOT compile ok
