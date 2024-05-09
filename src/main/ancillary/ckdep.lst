@@ -20,7 +20,7 @@ org.evolvis.tartools:csvfile 3.3-SNAPSHOT compile ok
 org.hamcrest:hamcrest-core 1.3 test ok
 org.mockito:mockito-core 4.4.0 test ok
 org.objenesis:objenesis 3.2 test ok
-org.postgresql:postgresql 42.7.3 provided TODO
+org.postgresql:postgresql 42.7.3 provided ok
 org.springframework:spring-aop 5.3.34 compile TODO
 org.springframework:spring-beans 5.3.34 compile TODO
 org.springframework:spring-context 5.3.34 compile TODO
