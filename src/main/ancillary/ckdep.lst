@@ -29,4 +29,4 @@ org.springframework:spring-expression 5.3.34 compile ok
 org.springframework:spring-jcl 5.3.34 compile ok
 org.springframework:spring-jdbc 5.3.34 compile ok
 org.springframework:spring-tx 5.3.34 compile ok
-org.yaml:snakeyaml 2.2 compile TODO
+org.yaml:snakeyaml 2.2 compile ok
