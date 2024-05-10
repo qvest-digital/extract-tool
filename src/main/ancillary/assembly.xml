@@ -47,6 +47,7 @@
 			</unpackOptions>
 			<scope>provided</scope>
 			<includes>
+				<include>commons-cli:commons-cli</include>
 				<include>org.apache.logging.log4j:log4j-core</include>
 			</includes>
 		</dependencySet>
