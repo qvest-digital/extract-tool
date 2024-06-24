@@ -34,10 +34,10 @@
 		<archiver.copyright.lastyear>2022</archiver.copyright.lastyear>
 		<javadoc.doclint>all,-missing</javadoc.doclint>
 		<!-- ‣ dependencies -->
-		<background-jobs.version>1.28</background-jobs.version>
+		<background-jobs.version>1.29-SNAPSHOT</background-jobs.version>
 		<commons-cli.version>1.8.0</commons-cli.version>
 		<commons-io.version>2.16.1</commons-io.version>
-		<csvfile.version>3.3</csvfile.version>
+		<csvfile.version>3.4-SNAPSHOT</csvfile.version>
 		<jackson.version>2.17.1</jackson.version>
 		<jackson.databind.version>${jackson.version}</jackson.databind.version>
 		<log4j.version>2.23.1</log4j.version>
